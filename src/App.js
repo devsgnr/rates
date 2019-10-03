@@ -1,26 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import Header from "./components/header";
+import Loading from "./components/loading";
+import axios from 'axios';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { loading: undefined, done: undefined };
+    this.getData = this.getData.bind(this);
+  }
+
+  getData = () => {
+    axios
+      .get(
+        `http://www.apilayer.net/api/live?access_key=${process.env.REACT_APP_CURRENCY_LAYER_API_KEY}&currencies=USD,EUR,JPY,GBP,AUD,CAD,CHF,CNH,SEK,NZD,EGP,NGN,ZAR`
+      )
+      .then(res => {
+        this.setState({ data: Object.entries(res.data.quotes) });
+      })
+      .then(() => {
+        this.setState({ loading: true });
+        setTimeout(() => {
+          this.setState({ done: true });
+        }, 1000);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.getData();
+    }, 3000);
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <Loading loading={this.state.loading} done={this.state.done} data={this.state.data} />
+      </div>
+    );
+  }
 }
 
 export default App;

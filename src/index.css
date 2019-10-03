@@ -1,10 +1,28 @@
-body {
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik&display=swap");
+
+body,
+.App,
+.loading {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.bg-dark {
+  background-color: rgb(23, 42, 69) !important;
+}
+
+p,
+input {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+}
+
+small {
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 12px !important;
 }
 
 code {
