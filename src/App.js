@@ -3,6 +3,7 @@ import './App.css';
 import Header from "./components/header";
 import Loading from "./components/loading";
 import axios from 'axios';
+import { API_KEY } from './config';
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class App extends Component {
   getData = () => {
     axios
       .get(
-        `http://www.apilayer.net/api/live?access_key=${process.env.REACT_APP_CURRENCY_LAYER_API_KEY}&currencies=USD,EUR,JPY,GBP,AUD,CAD,CHF,CNH,SEK,NZD,EGP,NGN,ZAR`
+        `http://www.apilayer.net/api/live?access_key=${API_KEY}&currencies=USD,EUR,JPY,GBP,AUD,CAD,CHF,CNH,SEK,NZD,EGP,NGN,ZAR`
       )
       .then(res => {
         this.setState({ data: Object.entries(res.data.quotes) });
