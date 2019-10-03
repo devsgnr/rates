@@ -2,6 +2,8 @@
 
 Currency Exchange Application built with React, Axios and CurrencyLayer API
 
+<video style="width:100%" controls src="./demo/AwesomeScreenshot-2019-10-03T17-30-24-996Z.webm" type="video/mp4"/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
