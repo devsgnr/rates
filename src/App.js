@@ -15,7 +15,7 @@ class App extends Component {
   getData = () => {
     axios
       .get(
-        `https://www.apilayer.net/api/live?access_key=${API_KEY}&currencies=USD,EUR,JPY,GBP,AUD,CAD,CHF,CNH,SEK,NZD,EGP,NGN,ZAR`
+        `http://www.apilayer.net/api/live?access_key=${API_KEY}&currencies=USD,EUR,JPY,GBP,AUD,CAD,CHF,CNH,SEK,NZD,EGP,NGN,ZAR`
       )
       .then(res => {
         this.setState({ data: Object.entries(res.data.quotes) });
