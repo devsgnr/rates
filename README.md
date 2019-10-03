@@ -3,7 +3,7 @@
 ### CurrencyLayer API Application
 
 The applicationi fetches data(quotes) from the<br>
-Open [CurrencyLayer API](https://currencylayer.com).
+[CurrencyLayer API](https://currencylayer.com).<br>
 More improvements coming soon.
 
 View application at []()
