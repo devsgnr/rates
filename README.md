@@ -2,7 +2,9 @@
 
 Currency Exchange Application built with React, Axios and CurrencyLayer API
 
-<video style="width:100%" controls src="./demo/AwesomeScreenshot-2019-10-03T17-30-24-996Z.webm" type="video/mp4"/>
+![alt text](./demo/demo.gif "Logo Title Text 1")
+
+Create a [CurrencyLayer Accout](https://currencylayer.com) to get an API Key, create a `.env` file in the root of the application, name the variable `REACT_APP_CURRENCY_LAYER_API` equals to your API Key and the `react-script` will automatically add it to your application.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
