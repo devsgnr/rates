@@ -2,7 +2,7 @@
 
 Currency Exchange Application built with React, Axios and CurrencyLayer API
 
-![alt text](./demo/demo-rates.gif "Rates - Demo")
+![alt text](./demo/demo-rates.gif "Rates - Desktop Demo")
 
 Create a [CurrencyLayer Accout](https://currencylayer.com) or a [Fixer.io Account](https://fixer.io) to get an API Key, create a `.env` file in the root of the application's directory, set a variable `REACT_APP_CURRENCY_LAYER_API=API KEY` for the CurrencyLayer API and `REACT_APP_FIXER_IO_API_KEY=API KEY` for the Fixer.io API (which ever you choose to use) and the `react-script` will automatically add it to your application.
 

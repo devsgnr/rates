@@ -6,6 +6,9 @@ class Cards extends Component {
   render() {
     return (
       <div className="cards">
+        <div className="mx-3 mt-3 text-secondary text-center">
+          <small>{`Rates as of ${this.props.date}`}</small>
+        </div>
         <div className="row m-0">
           {this.props.data.map(data => (
             <Card
