@@ -5,8 +5,8 @@ class Cards extends Component {
   state = {};
   render() {
     return (
-      <div>
-        <div className="row m-0 justify-content-start">
+      <div className="cards">
+        <div className="row m-0">
           {this.props.data.map(data => (
             <Card
               key={data[0]}

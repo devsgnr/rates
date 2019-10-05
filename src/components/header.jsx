@@ -8,9 +8,9 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="header">
-        <nav className="navbar rounded navbar-light shadow-sm mx-2 my-1">
-          <a className="navbar-brand font-weight-bold" href="/">
+      <div className="header sticky-header">
+        <nav className="navbar bg-primary navbar-dark shadow mx-0 my-0">
+          <a className="navbar-brand" href="/">
             Rates
           </a>
         </nav>

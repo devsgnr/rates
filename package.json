@@ -13,7 +13,9 @@
     "react-loading": "^2.0.3",
     "react-lottie": "^1.2.3",
     "react-scripts": "3.1.2",
-    "react-spinners-kit": "^1.9.0"
+    "react-spinners-kit": "^1.9.0",
+    "react-waypoint": "^9.0.2",
+    "waypoints": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

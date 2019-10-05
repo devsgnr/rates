@@ -13,15 +13,17 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <form className="form-inline d-flex justify-content-end mx-3 mt-3">
-        <input
-          id="curren"
-          type="number"
-          className="form-control rounded-pill"
-          placeholder="eg. 2000"
-          onChange={this.handleChange}
-        />
-      </form>
+      <div id="sticky" className="search">
+        <form className="d-flex justify-content-start m-0 convert">
+          <input
+            id="curren"
+            type="number"
+            className="form-control rounded-pill bg-primary text-light border-light"
+            placeholder="Value in USD"
+            onChange={this.handleChange}
+          />
+        </form>
+      </div>
     );
   }
 }

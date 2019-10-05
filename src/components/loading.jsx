@@ -43,7 +43,7 @@ class Loading extends Component {
             </div>
           </FadeIn>
         ) : (
-          <Dashboard data={this.props.data} />
+          <Dashboard data={this.props.data} date={this.props.date} />
         )}
       </div>
     );

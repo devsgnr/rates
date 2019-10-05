@@ -14,10 +14,11 @@ class App extends Component {
   getData = () => {
     axios
       .get(
-        `http://www.apilayer.net/api/live?access_key=${process.env.REACT_APP_CURRENCY_LAYER_API_KEY}&currencies=USD,EUR,JPY,GBP,AUD,CAD,CHF,CNH,SEK,NZD,EGP,NGN,ZAR`
+        `http://www.apilayer.net/api/live?access_key=${process.env.REACT_APP_CURRENCY_LAYER_API_KEY}&currencies=EUR,JPY,GBP,AUD,CAD,CHF,CNH,SEK,NZD,AED,EGP,NGN,ZAR`
       )
       .then(res => {
         this.setState({ data: Object.entries(res.data.quotes) });
+        this.setState({ date: Object.entries(res.headers)[0][1] });
       })
       .then(() => {
         this.setState({ loading: true });
@@ -40,7 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Loading loading={this.state.loading} done={this.state.done} data={this.state.data} />
+        <Loading loading={this.state.loading} done={this.state.done} data={this.state.data} date={this.state.date} />
       </div>
     );
   }

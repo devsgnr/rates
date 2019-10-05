@@ -19,7 +19,7 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="d-board w-100">
-        <SearchBar onValueChange={this.handleValue} />
+        <SearchBar onValueChange={this.handleValue} date={this.props.date} />
         <Cards data={this.props.data} value={this.state.value} />
       </div>
     );

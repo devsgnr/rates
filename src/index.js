@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import "bootstrap/dist/css/bootstrap.css";
+import "waypoints/lib/noframework.waypoints";
+import "waypoints/src/shortcuts/sticky";
+
+
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
