@@ -10,9 +10,9 @@ class Cards extends Component {
           <small>{`Rates as of ${this.props.date}`}</small>
         </div>
         <div className="row m-0">
-          {this.props.data.map(data => (
+          {this.props.data.map((data, ii) => (
             <Card
-              key={data[0]}
+              key={ii}
               currency={data[0]}
               rate={data[1]}
               value={this.props.value}
